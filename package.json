@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.4.9",
+    "lib-flexible": "^0.3.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -21,6 +21,8 @@
     "@vue/eslint-config-prettier": "^3.0.5",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-px2rem": "^0.3.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {

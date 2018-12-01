@@ -17,10 +17,10 @@ module.exports = {
   // corsUseCredentials: false,
   // webpack 配置，键值对象时会合并配置，为方法时会改写配置
   // https://cli.vuejs.org/guide/webpack.html#simple-configuration
-  configureWebpack: (config) => {
-  },
+  configureWebpack: (config) => {},
   productionSourceMap: false,
   // 配置高于chainWebpack中关于 css loader 的配置
+
   css: {
     // 是否开启支持 foo.module.css 样式
     modules: false,
@@ -33,12 +33,15 @@ module.exports = {
 
     // css预设器配置项
     loaderOptions: {
+      
       css: {
         // options here will be passed to css-loader
       },
-
       postcss: {
         // options here will be passed to postcss-loader
+        plugins: [require('postcss-px2rem')({
+          remUnit: 75
+        })]
       }
     }
   },
@@ -60,8 +63,7 @@ module.exports = {
        }
      }, */
 
-    before: app => {
-    }
+    before: app => {}
   },
   // 构建时开启多进程处理 babel 编译
   parallel: require('os').cpus().length > 1,

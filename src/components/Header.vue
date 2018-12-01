@@ -24,7 +24,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10px;
+  padding: 30px 15px;
   color: #fff;
   background-image: -webkit-gradient(
     linear,

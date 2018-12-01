@@ -5,6 +5,7 @@
 </template>
 
 <style lang="less">
+@color: #0085ff;
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

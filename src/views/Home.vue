@@ -3,18 +3,11 @@
     <!-- 头部 -->
     <Header :header="title"></Header>
     <div class="select_style">
-      <el-select v-model="value" placeholder="请选择" class="select">
-        <el-option
-          v-for="item in options"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value">
-        </el-option>
-      </el-select>
-    </div>
+   
+   </div>
     <!-- 预约室列表 -->
     <section class="boardroom_list" id="boardroom_list">
-		<router-link v-for="(v,i) in msg" :key="i" :to="'/detail?v='+i">
+		<!-- <router-link v-for="(v,i) in msg" :key="i" :to="'/myBespeak?v='+i">
 			<div class="boardroom_item">
 				<div class="item_left">
 					<div>33333333333333333333332</div>
@@ -25,13 +18,16 @@
 					<i class="el-icon-arrow-right"></i>
 				</div>
 			</div>
-		</router-link>
+		</router-link> -->
+    <!-- 时间插件 -->
+    <Calendar></Calendar>
     </section>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import Header from "@/components/Header";
+import Calendar from "@/components/Calendar";
 export default {
   name: "Home",
   data() {
@@ -67,7 +63,8 @@ export default {
     };
   },
   components: {
-    Header
+    Header,
+    Calendar
   },
   methods: {
     onSubmit() {
